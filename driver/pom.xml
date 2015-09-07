@@ -12,6 +12,7 @@
 	<artifactId>bp-common-query-driver</artifactId>
 
 	<name>Black Pepper Common Query Driver</name>
+	<description>Drivers for basic data query forms.</description>
 	
 	<dependencies>
 	

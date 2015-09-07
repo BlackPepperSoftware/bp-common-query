@@ -12,6 +12,7 @@
 	<artifactId>bp-common-query-spring-taglib</artifactId>
 
 	<name>Black Pepper Common Query Spring Taglib</name>
+	<description>Spring taglibs for basic data query forms.</description>
 	
 	<dependencies>
 	

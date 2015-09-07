@@ -12,6 +12,7 @@
 	<artifactId>bp-common-query</artifactId>
 
 	<name>Black Pepper Common Query</name>
+	<description>Library for building basic data queries.</description>
 	
 	<dependencies>
 

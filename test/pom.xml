@@ -12,6 +12,7 @@
 	<artifactId>bp-common-query-test</artifactId>
 
 	<name>Black Pepper Common Query Test</name>
+	<description>Support for testing with basic data queries.</description>
 
 	<dependencies>
 	
