@@ -32,7 +32,7 @@
 			<dependency>
 				<groupId>uk.co.blackpepper.common</groupId>
 				<artifactId>bp-common-driver</artifactId>
-				<version>1.0.1</version>
+				<version>1.1.0-SNAPSHOT</version>
 			</dependency>
 		
 			<dependency>
@@ -44,7 +44,7 @@
 			<dependency>
 				<groupId>uk.co.blackpepper.common</groupId>
 				<artifactId>bp-common-i18n-spring-taglib</artifactId>
-				<version>1.0.0</version>
+				<version>1.1.0-SNAPSHOT</version>
 			</dependency>
 			
 			<!-- Guava -->
