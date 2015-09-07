@@ -17,10 +17,10 @@
 	<name>Black Pepper Common Query Parent</name>
 	
 	<scm>
-		<connection>scm:git:git@codebasehq.com:blackpepper/black-pepper-common/bp-common-query.git</connection>
-		<developerConnection>scm:git:git@codebasehq.com:blackpepper/black-pepper-common/bp-common-query.git</developerConnection>
+		<connection>scm:git:git@github.com:BlackPepperSoftware/bp-common-query.git</connection>
+		<developerConnection>scm:git:git@github.com:BlackPepperSoftware/bp-common-query.git</developerConnection>
 		<tag>HEAD</tag>
-		<url>https://blackpepper.codebasehq.com/projects/black-pepper-common/repositories/bp-common-query</url>
+		<url>https://github.com/BlackPepperSoftware/bp-common-query</url>
 	</scm>
 	
 	<dependencyManagement>
