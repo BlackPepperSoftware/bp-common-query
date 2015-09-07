@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jsp:root version="2.1" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:i18n="http://www.blackpepper.co.uk/common/i18n"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns="http://www.w3.org/1999/xhtml"
+>
+	<div class="form-group">	
+		<label class="control-label" for="rows">
+			<i18n:message code="uk.co.blackpepper.common.query.spring.taglib.rows.label"/>
+		</label>
+		
+		<jsp:text> </jsp:text>
+		
+		<form:select path="rows" id="rows" cssClass="form-control form-autosubmit">
+			<form:option value="10"/>
+			<form:option value="25"/>
+			<form:option value="50"/>
+			<form:option value="100"/>
+			<form:option value="0">
+				<jsp:attribute name="label">
+					<i18n:message code="uk.co.blackpepper.common.query.spring.taglib.rows.allRows"/>
+				</jsp:attribute>
+			</form:option>
+		</form:select>
+		
+		<form:hidden path="start"/>	
+	</div>
+		
+</jsp:root>

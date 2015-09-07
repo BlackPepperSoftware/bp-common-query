@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jsp:root version="2.1" 
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:i18n="http://www.blackpepper.co.uk/common/i18n"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns="http://www.w3.org/1999/xhtml"
+>
+	<div class="form-group">
+	
+		<label class="control-label sr-only" for="queryString">
+			<i18n:message code="uk.co.blackpepper.common.query.spring.taglib.search.label"/>
+		</label>
+			
+		<div class="input-group">
+			<form:input path="queryString" id="queryString" cssClass="form-control"/>
+			<span class="input-group-btn">
+				<button class="btn btn-default search">
+					<span class="glyphicon glyphicon-search"/>
+				</button>
+			</span>					
+		</div>
+	</div>		
+	
+</jsp:root>

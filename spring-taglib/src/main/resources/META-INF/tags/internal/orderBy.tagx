@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jsp:root version="2.1" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:i18n="http://www.blackpepper.co.uk/common/i18n"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:query="http://www.blackpepper.co.uk/common/query-spring-internal"
+	xmlns="http://www.w3.org/1999/xhtml"
+>
+	<jsp:directive.attribute name="options" type="java.util.Map" required="true"/>
+
+	<div class="form-group">	
+	
+		<label class="control-label">
+			<i18n:message code="uk.co.blackpepper.common.query.spring.taglib.orderBy.label"/>
+		</label>
+		
+		<jsp:text> </jsp:text>
+		
+		<form:select path="orderBy" cssClass="form-control form-autosubmit">
+			<c:forEach var="option" items="${orderByOptions}">
+				<form:option value="${option.key}">
+					<jsp:attribute name="label">
+						<i18n:message code="${option.value}"/>
+					</jsp:attribute>
+				</form:option>
+			</c:forEach>
+		</form:select>
+		
+		<jsp:text> </jsp:text>
+		
+		<div id="item-order-group" class="btn-group" data-toggle="buttons">
+			<jsp:element name="label">
+				<jsp:attribute name="class">
+					<jsp:text>btn btn-default</jsp:text>
+					<c:if test="${query.order eq 'ASCENDING'}">
+						<jsp:text> active</jsp:text>
+					</c:if>
+				</jsp:attribute>
+
+				<jsp:attribute name="title">
+					<i18n:message code="uk.co.blackpepper.common.query.spring.taglib.orderBy.ascendingTooltip"/> 
+				</jsp:attribute>
+				
+				<form:radiobutton path="order" value="ASCENDING" cssClass="form-autosubmit"/>
+				<i18n:message code="uk.co.blackpepper.common.query.spring.taglib.orderBy.ascending"/>
+			</jsp:element>
+			
+			<jsp:element name="label">
+				<jsp:attribute name="class">
+					<jsp:text>btn btn-default</jsp:text>
+					<c:if test="${query.order eq 'DESCENDING'}">
+						<jsp:text> active</jsp:text>
+					</c:if>
+				</jsp:attribute>
+			
+				<jsp:attribute name="title">
+					<i18n:message code="uk.co.blackpepper.common.query.spring.taglib.orderBy.descendingTooltip"/>
+				</jsp:attribute>
+				
+				<form:radiobutton path="order" value="DESCENDING" cssClass="form-autosubmit"/>
+				<i18n:message code="uk.co.blackpepper.common.query.spring.taglib.orderBy.descending"/>
+			</jsp:element>
+		</div>		
+	</div>
+	
+</jsp:root>

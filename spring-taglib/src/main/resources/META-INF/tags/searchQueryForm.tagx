@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jsp:root version="2.1" 
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:query="http://www.blackpepper.co.uk/common/query-spring-internal"
+	xmlns="http://www.w3.org/1999/xhtml"
+>
+	<jsp:directive.attribute name="orderByOptions" type="java.util.Map" required="true"/>
+
+	<input type="hidden" name="start" value="0"/>
+
+	<div class="navbar-left">	
+		<query:search/>	
+	</div>	
+	
+	<div class="navbar-right">
+		<query:rows/>		
+		<jsp:text> </jsp:text>		
+		<query:orderBy options="${orderByOptions}"/>
+	</div>
+
+</jsp:root>

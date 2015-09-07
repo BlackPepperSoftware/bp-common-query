@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jsp:root version="2.1"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:i18n="http://www.blackpepper.co.uk/common/i18n"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:query="http://www.blackpepper.co.uk/common/query-spring"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns="http://www.w3.org/1999/xhtml"
+>
+	<jsp:directive.attribute name="query" type="uk.co.blackpepper.common.query.PagedQuery" required="true" />
+	<jsp:directive.attribute name="results" type="uk.co.blackpepper.common.query.PagedResults" required="true"/>
+	<jsp:directive.attribute name="cssClass" type="java.lang.String" required="false"/>
+
+	<ul class="pager ${cssClass}">
+	
+		<c:choose>
+			<c:when test="${results.hasPreviousPage()}">
+				<li class="previous">
+					<a href="${query:previousLink(query)}">
+						<i18n:message code="uk.co.blackpepper.common.query.spring.taglib.pager.previous"/>
+					</a>
+				</li>
+			</c:when>
+			<c:otherwise>
+				<li class="previous disabled">
+					<a href="#">
+						<i18n:message code="uk.co.blackpepper.common.query.spring.taglib.pager.previous"/>
+					</a>
+				</li>
+			</c:otherwise>
+		</c:choose>
+		
+		<li class="status">
+			<i18n:message code="uk.co.blackpepper.common.query.spring.taglib.pager.status" elementName="label">
+				<spring:argument value="${results.start + 1}"/>
+				<spring:argument value="${results.start + results.resultCount}"/>
+				<spring:argument value="${results.totalCount}"/>
+			</i18n:message>
+		</li>
+		
+		<c:choose>
+			<c:when test="${results.hasNextPage()}">
+				<li class="next">
+					<a href="${query:nextLink(query)}">
+						<i18n:message code="uk.co.blackpepper.common.query.spring.taglib.pager.next"/>
+					</a>
+				</li>
+			</c:when>
+			<c:otherwise>
+				<li class="next disabled">
+					<a href="#">
+						<i18n:message code="uk.co.blackpepper.common.query.spring.taglib.pager.next"/>
+					</a>
+				</li>
+			</c:otherwise>
+		</c:choose>
+		
+	</ul>
+
+</jsp:root>

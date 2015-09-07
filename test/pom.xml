@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>uk.co.blackpepper.common</groupId>
+		<artifactId>bp-common-query-parent</artifactId>
+		<version>1.0.1-SNAPSHOT</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>bp-common-query-test</artifactId>
+
+	<name>Black Pepper Common Query Test</name>
+
+	<dependencies>
+	
+		<!-- Black Pepper Common -->
+	
+		<dependency>
+			<groupId>uk.co.blackpepper.common</groupId>
+			<artifactId>bp-common-query</artifactId>
+		</dependency>
+	
+		<!-- JUnit -->
+	
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- Hamcrest -->
+		
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-library</artifactId>
+		</dependency>
+		
+		<!-- Mockito -->
+		
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+	</dependencies>
+	
+</project>

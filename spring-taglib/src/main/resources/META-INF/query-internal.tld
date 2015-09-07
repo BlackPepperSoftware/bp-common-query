@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib version="2.1"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+>
+	<description>Black Pepper Common Query Spring Taglib Internal</description>
+
+	<tlib-version>1.0</tlib-version>
+	<short-name>query</short-name>
+	<uri>http://www.blackpepper.co.uk/common/query-spring-internal</uri>
+	
+	<tag-file>
+		<description>
+			The "search" field group.
+		</description>
+		<name>search</name>
+		<path>/META-INF/tags/internal/search.tagx</path>
+	</tag-file>
+	
+	<tag-file>
+		<description>
+			The "rows" field group.
+		</description>
+		<name>rows</name>
+		<path>/META-INF/tags/internal/rows.tagx</path>
+	</tag-file>
+
+	<tag-file>
+		<description>
+			The "order by" field group.
+		</description>
+		<name>orderBy</name>
+		<path>/META-INF/tags/internal/orderBy.tagx</path>
+	</tag-file>
+
+</taglib>
