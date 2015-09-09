@@ -44,6 +44,16 @@
 	
 	</licenses>
 	
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/BlackPepperSoftware/bp-common-query/issues</url>
+	</issueManagement>
+	
+	<ciManagement>
+		<system>Travis CI</system>
+		<url>https://travis-ci.org/BlackPepperSoftware/bp-common-query</url>
+	</ciManagement>
+
 	<scm>
 		<connection>scm:git:git@github.com:BlackPepperSoftware/bp-common-query.git</connection>
 		<developerConnection>scm:git:git@github.com:BlackPepperSoftware/bp-common-query.git</developerConnection>
